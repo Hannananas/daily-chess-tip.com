@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Daily Chess</title>
+    <link rel="stylesheet" href="/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: #a30013;
+            background-repeat: no-repeat;
+            margin: 0;
+            font-family: courier;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .large {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #paragraph-container {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            max-width: 410px;
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.ibb.co/Lgy1fB7/chess-background.png" class="large" alt="background"/>
+    <h1>DAILY CHESS TIP</h1>
+    <main>
+        <div id="paragraph-container">
+            <p id="paragraph-1">Control the Center: Dominating the central squares (e4, d4, e5, and d5) is crucial. By controlling the center, your pieces have more mobility, and you can influence the game more effectively.</p>
+            <p id="paragraph-2" style="display:none;">Develop Your Pieces Early: Quickly develop your knights and bishops to active squares. Avoid moving the same piece multiple times in the opening unless absolutely necessary. Development is key to preparing for the middle game.</p>
+            <p id="paragraph-3" style="display:none;">King Safety: Ensure your king is safe by castling early. This not only protects your king but also connects your rooks, making them more powerful.</p>
+            <p id="paragraph-4" style="display:none;">Think Ahead: Always try to anticipate your opponent's moves. Think about what your opponent is trying to do and plan your moves accordingly. This helps in spotting potential threats and opportunities.</p>
+            <p id="paragraph-5" style="display:none;">Pawns Structure: Pay attention to your pawn structure. Avoid creating weaknesses such as isolated, doubled, or backward pawns. Strong pawn structures provide solid defense and support for your pieces.</p>
+            <p id="paragraph-6" style="display:none;">Coordinate Your Pieces: Ensure your pieces are working together and supporting each other. A coordinated attack is much stronger than individual efforts. Make sure your pieces are placed on active squares where they can influence the game.</p>
+            <p id="paragraph-7" style="display:none;">Practice Tactics: Regularly practice tactical puzzles and exercises. Tactics are a vital part of chess and can often turn the game in your favor. Look out for common patterns like forks, pins, skewers, and discovered attacks.</p>
+        </div>
+    </main>
+    <script>
+        let currentParagraph = 1;
+        const totalParagraphs = 7;
+
+        function showNextParagraph() {
+            // Hide the current paragraph
+            document.getElementById(`paragraph-${currentParagraph}`).style.display = 'none';
+
+            // Move to the next paragraph
+            currentParagraph = (currentParagraph % totalParagraphs) + 1;
+
+            // Show the next paragraph
+            document.getElementById(`paragraph-${currentParagraph}`).style.display = 'block';
+        }
+
+        // Set interval to change paragraph every 2 minutes (120000 milliseconds)
+        setInterval(showNextParagraph, 60000);
+
+        // Initial call to show the first paragraph
+        showNextParagraph();
+    </script>
+</body>
+</html>
