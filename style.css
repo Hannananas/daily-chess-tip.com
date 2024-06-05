@@ -1,0 +1,48 @@
+h1 {
+    font-family: courier;
+    font-size: 30px;
+    line-height: 1.4;
+    text-transform: none;
+    color: black;
+    position: absolute;
+    top: 37%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+img.large {
+    width: 750px;
+    height: 750px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body {
+    background: #a30013;
+    background-repeat: no-repeat;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+}
+
+#paragraph-container {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    max-width: 400px;
+    text-align: center;
+    color: #333;
+   position: absolute; 
+  top: 55%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
